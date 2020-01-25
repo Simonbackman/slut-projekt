@@ -1,0 +1,18 @@
+<%- include('./partials/nav.ejs') %>
+<script>
+    (function ($) {
+        $(function () {
+            $("nav ul li > a").click(function (e) {
+            });
+
+            // makes hamburger into X
+            $("#nav-toggle").on("click", function () {
+                this.classList.toggle("active");
+            });
+            $("#nav-toggle").click(function () {
+                $("nav ul").toggle();
+            });
+        });
+    })(jQuery);
+
+</script>

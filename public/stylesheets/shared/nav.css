@@ -1,0 +1,147 @@
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 45px;
+  line-height: 4.4rem;
+  background: black;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background: rgb(59, 55, 55);
+  color: #76a0c7;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  .topLine {
+    border-top: 0.1rem solid grey;
+  }
+  .bottomLine {
+    border-bottom: 2px solid grey;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #nav-toggle {
+    position: absolute;
+    left: 10px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 2rem;
+    height: 3px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  #nav-toggle span:before {
+    top: -10px;
+  }
+  #nav-toggle span:after {
+    bottom: -10px;
+  }
+  /* removes the middle stick in the hamburger meny */
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before,
+  #nav-toggle.active span:after {
+    top: 0;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+.navigation {
+  height: 70px;
+  background: black;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 4.4rem;
+  text-transform: uppercase;
+}
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+@import 'shared/nav.css';
+@import 'shared/errPg4.css';
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
