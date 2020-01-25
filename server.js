@@ -20,6 +20,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ limit: '10mb', extended: false }));
 
 app.use('/', require('./routes/index'));
+app.use('/admins', require('./routes/admins'));
 
 // 404 page
 app.get('*', (request, response) =>
