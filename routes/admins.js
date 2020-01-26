@@ -12,7 +12,9 @@ router.get('/login', (req, res) => {
 
 // Register Page
 router.get('/register', ensureAuthenticated, (req, res) => {
-  res.render('admin/register');
+  res.render('admin/register', {
+    name: req.user.name
+  });
 });
 
 // Register Handler
@@ -26,8 +28,8 @@ router.post('/register', (req, res) => {
   if (password !== password2) {
     errors.push({ msg: 'Password do not match' });
   }
-  if (password.length < 6) {
-    errors.push({ msg: 'Password need to be at least 8 characters' });
+  if (password.length < 5) {
+    errors.push({ msg: 'Password need to be at least 5 characters' });
   }
   if (errors.length > 0) {
     res.render('admin/register', {

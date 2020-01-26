@@ -1,0 +1,49 @@
+.loggedIn {
+  height: auto;
+  background-color: #202429;
+}
+
+.adminDashboard {
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+
+.adminDashboard > a > h1 {
+  display: inline-block;
+  font-size: 4rem;
+  border: 1px solid grey;
+  border-style: ridge;
+}
+/*===========
+    Admin Nav
+===========*/
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}

@@ -1,5 +1,6 @@
 @import 'shared/nav.css';
 @import 'shared/errPg4.css';
+@import 'shared/dashboard.css';
 *,
 ::before,
 ::after {
@@ -11,4 +12,6 @@
 body,
 html {
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
