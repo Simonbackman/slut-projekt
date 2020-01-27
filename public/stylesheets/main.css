@@ -1,6 +1,9 @@
 @import 'shared/nav.css';
 @import 'shared/errPg4.css';
 @import 'shared/dashboard.css';
+@import 'shared/footer.css';
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 *,
 ::before,
 ::after {

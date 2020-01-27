@@ -53,4 +53,9 @@ app.get('*', (request, response) =>
   response.render(__dirname + '\\views\\404.ejs')
 );
 
-app.listen(process.env.PORT || 2000);
+// app.listen(process.env.PORT || 2000);
+
+const PORT = process.env.PORT || 2000;
+app.listen(PORT, () => {
+  console.log(`Server up and running att http://localhost:${PORT}`);
+});

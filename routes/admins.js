@@ -65,8 +65,8 @@ router.post('/register', (req, res) => {
             newAdmin
               .save()
               .then(admin => {
-                req.flash('success_msg', 'You are now registerd');
-                res.redirect('/admins/login');
+                req.flash('success_msg', 'account now registerd');
+                res.redirect('/admins/register');
               })
               .catch(err => console.log(err));
           })
