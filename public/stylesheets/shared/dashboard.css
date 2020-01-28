@@ -2,7 +2,13 @@
   height: auto;
   background-color: #202429;
 }
-
+.logoutBtn {
+  /* border-radius: 123px; */
+  border-radius: 19px;
+  background: #545b619f;
+  display: inline-block;
+  padding: 10px;
+}
 .adminDashboard {
   border-bottom: 1px solid grey;
   text-align: center;

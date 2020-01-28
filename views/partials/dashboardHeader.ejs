@@ -1,19 +1,18 @@
 <div class="loggedIn">
-    <p class="lead mb-3 ">Logged in as: <%= name %></p>
+  <p class="lead mb-3 ml-4" style=" display: inline-block;">
+    Logged in as: <%= name %>
+  </p>
+  <a href="/admins/logout" class="btn btn-secondary logoutBtn">Logout</a>
 </div>
+
 <header class="adminDashboard">
-    <a href="/dashboard">
-        <h1 class="mt-4 ">Dashboard</h1>
-    </a>
-
+  <a href="/dashboard">
+    <h1 class="mt-4 ">Dashboard</h1>
+  </a>
 </header>
-
-
-
+<i class="fas fa-shopping-basket"> </i>
 <div class="navbar">
-    <a href="/"> StartPage</a>
-    <a class="active" href="/admins/register"> Create Admin</a>
-    <a href="#"> Products</a>
-    <a href="/admins/logout" class="btn btn-secondary logoutBtn"
-        style=" border-radius: 123px; background: #545b619f;">Logout</a>
+  <a href="/"> StartPage</a>
+  <a class="active" href="/admins/register"> Create Admin</a>
+  <a href="#"> Products</a>
 </div>

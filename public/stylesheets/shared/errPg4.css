@@ -1,3 +1,11 @@
 .errPg4 {
-  color: red;
+  font: 80px "LeagueGothicRegular";
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d2d,
+    0 0 30px #ff2d2d, 0 0 40px #ff2d2d, 0 0 50px #ff2d2d, 0 0 75px #ff2d2d;
+  letter-spacing: 5px;
+}
+
+#errpgContainer {
+  border-radius: 90px;
 }

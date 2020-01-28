@@ -1,9 +1,9 @@
-@import 'shared/nav.css';
-@import 'shared/errPg4.css';
-@import 'shared/dashboard.css';
-@import 'shared/footer.css';
+@import "shared/nav.css";
+@import "shared/errPg4.css";
+@import "shared/dashboard.css";
+@import "shared/footer.css";
 
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 *,
 ::before,
 ::after {
@@ -15,6 +15,6 @@
 body,
 html {
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
 }

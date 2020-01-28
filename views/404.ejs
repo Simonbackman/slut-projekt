@@ -1,11 +1,27 @@
 <div class="row mt-5">
-    <div class="col-md-6 m-auto">
-        <div class="card card-body text-center">
-            <p class="errPg4">
-                The page you are looking for don't exit <br><br>
-                404 <br>
-                <button><a style="color: black;" href="/">Home</a></button>
-            </p>
-        </div>
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center" id="errpgContainer">
+      <p
+        class="errPg4"
+      >
+        The page you are looking for don't exit <br />
+        404 <br />
+        <div style="font-size:30px;">
+        <!-- <button>
+          <a onclick="history.back(-1)" class="link-button link-back-button"
+            >Go Back</a
+          >
+        </button> -->
+        <a onclick="history.back(-1)" type="button" class="btn btn-primary"
+            >Go Back</a
+          >
+          <a href="/" class="btn btn-primary">Home</a>
+        <!-- <button><a style="color: black;" href="/">Home</a></button> -->
+        <!-- <button type="button" class="btn btn-primary"><a href="/">Home</a></button> -->
+
     </div>
+      </p>
+    </div>
+  </div>
 </div>
+
