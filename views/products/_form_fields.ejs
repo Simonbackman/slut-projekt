@@ -1,0 +1,24 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= product.title %>" />
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item">
+    <label>Price in cents: </label>
+    <input type="number" name="price" min="1" value="<%= product.price %>" />
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>Image:</label>
+    <input type="file" name="cover" required class="product-cover filepond" />
+  </div>
+  <div class="form-item">
+    <label>Description:</label>
+    <textarea name="description"><%= product.description %></textarea>
+  </div>
+</div>

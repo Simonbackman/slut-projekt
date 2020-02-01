@@ -1,6 +1,6 @@
 <div class="loggedIn">
   <p class="lead mb-3 ml-4" style=" display: inline-block;">
-    Logged in as: <%= name %>
+    Logged in as: < %=name %>
   </p>
   <a href="/admins/logout" class="btn btn-secondary logoutBtn">Logout</a>
 </div>
@@ -14,5 +14,6 @@
 <div class="navbar">
   <a href="/"> StartPage</a>
   <a class="active" href="/admins/register"> Create Admin</a>
-  <a href="#"> Products</a>
+  <a href="/products"> Products</a>
+  <a href="/products/new"> New Products</a>
 </div>

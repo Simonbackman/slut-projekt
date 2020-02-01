@@ -1,0 +1,11 @@
+<%- include('../partials/dashboardHeader.ejs') %>
+<div class="container">
+  <h2 class="page-header">Edit Product</h2>
+  <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+    <%- include('_form_fields_edit') %>
+    <div class="form-row form-row-end btn-row">
+      <a class="btn btn-danger" href="/products">Cancel</a>
+      <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<%- include('../partials/dashboardHeader.ejs') %>
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body" style="border-radius: 55px">
+      <div class="text-center mb-3">
+
+        <h2 class="page-header"> Title: <%= product.title %></h2>
+      </div>
+      <div class="product-details">
+        <div>
+          <img class="product-cover" src="<%= product.coverImagePath %>" />
+          <div class="product-details-btn-grid">
+            <a class="btn btn-primary" href="/products/<%= product.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/products/${product.id}` }) %>
+          </div>
+        </div>
+        <div class="product-details-grid">
+          <div class="product-details-label">Price:</div>
+          <div><%= product.price %></div>
+          <div class="product-details-label">Description:</div>
+          <div><%= product.description %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

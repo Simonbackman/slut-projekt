@@ -1,22 +1,38 @@
-const mongoose = require("mongoose");
-const ProductSchema = new mongoose.Schema({
-  titel: {
+const mongoose = require('mongoose');
+
+const productSchema = new mongoose.Schema({
+  title: {
     type: String,
     required: true
+  },
+  description: {
+    type: String
   },
   price: {
     type: Number,
     required: true
   },
-  image: {
-    type: String,
+  createdAt: {
+    type: Date,
+    required: true,
+    default: Date.now
+  },
+  coverImage: {
+    type: Buffer,
     required: true
   },
-  details: {
+  coverImageType: {
     type: String,
     required: true
   }
 });
 
-const Product = mongoose.model("Product", ProductSchema);
-module.exports = Product;
+productSchema.virtual('coverImagePath').get(function() {
+  if (this.coverImage != null && this.coverImageType != null) {
+    return `data:${
+      this.coverImageType
+    };charset=utf-8;base64,${this.coverImage.toString('base64')}`;
+  }
+});
+
+module.exports = mongoose.model('Product', productSchema);
