@@ -19,10 +19,17 @@
 body,
 html {
   min-height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* overflow-y: auto; */
 }
 
+footer {
+  background-color: #202429;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 .container {
   max-width: 1200px;
   margin: auto;
