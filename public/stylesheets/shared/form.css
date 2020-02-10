@@ -55,26 +55,17 @@
   background-color: black;
 }
 
-/* .form-item input:focus,
-.form-item select:focus,
-.form-item textarea:focus {
-  border-color: var(--form-input-border-color-light);
-} */
-
 .filepond--root {
   font-family: 'Gotham Rounded';
   margin-bottom: 0;
 }
 
 .filepond--panel-root {
-  /* background-color: var(--form-input-background-color);
-  border: 1px solid var(--form-input-border-color); */
   background-color: #00699e;
   background-color: #fff;
 }
 
 .filepond--drop-label {
-  /* color: var(--color-text-light); */
   color: black;
   font-size: inherit;
 }

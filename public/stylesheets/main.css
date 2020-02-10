@@ -24,14 +24,6 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-footer {
-  background-color: #202429;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
 .error-message {
   color: red;
 }
