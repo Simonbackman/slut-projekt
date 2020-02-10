@@ -1,16 +1,16 @@
 <%- include('../partials/dashboardHeader.ejs') %>
-<div class="container">
-  <h2 class="page-header">Search Product</h2>
-  <form action="/products" method="GET">
+<div class="container2">
+  <h2 class="page-header">Search Products</h2>
+  <form class="searchFormInd" action="/products" method="GET">
     <div class="form-row">
       <div class="form-item">
-        <label>Title</label>
-        <input type="text" name="title" value="<%= searchOptions.title %>" />
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="search for the title" value="<%= searchOptions.title %>" />
       </div>
     </div>
     <div class="form-row"></div>
     <div class="form-row form-row-end">
-      <button class="btn btn-primary" type="submit">Search</button>
+      <button class="btn btn-primary searchSubInd" type="submit">Search</button>
     </div>
   </form>
   <br />

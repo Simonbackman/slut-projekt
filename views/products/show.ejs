@@ -16,11 +16,11 @@
         </div>
         <div class="product-details-grid">
           <div class="product-details-label">Price:</div>
-          <div><%= product.price %></div>
+          <div><%= product.price / 100 %></div>
           <div class="product-details-label">Description:</div>
           <div><%= product.description %></div>
         </div>
-      </div>
+      </div><a href="/products" type="button" class="btn btn-primary">all products</a>
     </div>
   </div>
 </div>

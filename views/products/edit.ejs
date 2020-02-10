@@ -1,11 +1,12 @@
 <%- include('../partials/dashboardHeader.ejs') %>
-<div class="container">
+<div class="container2 contEdit">
   <h2 class="page-header">Edit Product</h2>
+  <%- include('../partials/errorMessage.ejs') %>
   <form action="/products/<%= product.id %>?_method=PUT" method="POST">
     <%- include('_form_fields_edit') %>
     <div class="form-row form-row-end btn-row">
-      <a class="btn btn-danger" href="/products">Cancel</a>
-      <button class="btn btn-primary" type="submit">Update</button>
+      <a class="btn btn-danger editBtn1" href="/products">Cancel</a>
+      <button class="btn btn-primary editBtn1" type="submit">Update</button>
     </div>
   </form>
 </div>

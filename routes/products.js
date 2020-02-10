@@ -53,8 +53,7 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id)
-      // .populate("author")
-      .exec();
+    .exec();
     res.render('products/show', { product: product });
   } catch {
     res.redirect('/');

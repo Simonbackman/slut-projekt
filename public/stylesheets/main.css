@@ -8,9 +8,10 @@
 @import 'shared/products.css';
 
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 *,
-::before,
-::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +21,7 @@ body,
 html {
   min-height: 100vh;
   overflow-x: hidden;
-  /* overflow-y: auto; */
+  font-family: 'Poppins', sans-serif;
 }
 
 footer {
@@ -30,19 +31,40 @@ footer {
   bottom: 0;
   width: 100%;
 }
-.container {
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 3rem;
-}
-
-.page-header {
-  font-size: 2rem;
-  font-weight: 500;
-  color: white;
-}
 
 .error-message {
-  /* color: hsl(var(--color-danger-hue), 100%, 50%); */
   color: red;
+}
+@media only screen and (max-width: 344px) {
+  .adminDashboard > a > h1 {
+    font-size: 2.5rem;
+  }
+  .prodGridTxt {
+    font-size: 1.5rem;
+  }
+  .prodGridImg {
+    width: 90%;
+    padding-left: 22px;
+  }
+  #prodGridContE {
+    margin: auto;
+    width: 90%;
+  }
+  .page-header {
+    font-size: 1.5rem;
+  }
+  .container2 {
+    border-radius: 60px;
+  }
+}
+@media only screen and (max-width: 382px) {
+  .prodCImgR {
+    width: 90vw;
+  }
+  .form-item {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (max-width: 466px) {
 }

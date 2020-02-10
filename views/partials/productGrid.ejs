@@ -3,9 +3,9 @@ locals.large ? 'product-grid-large' : '' %>
 <div class="product-grid <%= productGridClass %>">
   <% products.forEach(product => { %>
   <a href="/products/<%= product.id %>">
-    <div>
-      <p style="text-align: center; font-size: 2rem;"><%= product.title %></p>
-      <img class="product-cover <%= productCoverClass %>" src="<%= product.coverImagePath %>" />
+    <div id="prodGridContE">
+      <p class="prodGridTxt"><%= product.title %></p>
+      <img class="product-cover prodGridImg <%= productCoverClass %>" src="<%= product.coverImagePath %>" />
     </div>
   </a>
   <% }) %>

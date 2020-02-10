@@ -1,9 +1,10 @@
 <%- include('../partials/dashboardHeader.ejs') %>
-<div class="container">
+<div class="container2" style="border-radius: 5%;">
   <h2 class="page-header">New Product</h2>
-  <form action="/products" method="POST">
+  <%- include('../partials/errorMessage.ejs') %>
+  <form class="newProdForm" action="/products" method="POST">
     <%- include('_form_fields') %>
-    <div class="form-row form-row-end btn-row">
+    <div class="form-row form-row-end btn-row" style="padding-bottom:4%">
       <a class="btn btn-danger" href="/products">Cancel</a>
       <button class="btn btn-primary" type="submit">Create</button>
     </div>
