@@ -2,6 +2,7 @@
 @import 'shared/errPg4.css';
 @import 'shared/dashboard.css';
 @import 'shared/footer.css';
+@import 'shared/adminNav.css';
 
 @import 'shared/buttons.css';
 @import 'shared/form.css';
@@ -25,6 +26,11 @@ html {
 }
 
 .error-message {
+  color: red;
+}
+
+.xModalClose:hover,
+.xModalClose:focus {
   color: red;
 }
 @media only screen and (max-width: 344px) {

@@ -1,2 +1,108 @@
 <%- include('../partials/dashboardHeader.ejs') %>
+<style>
+    .modal-body {
+        overflow-x: auto;
+    }
+</style>
+
+<section style="height: 100vh;">
+    <div class="container" style="padding-top:28vh;">
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="./images/iconList.png" alt="Card image cap"
+                    style="height: 50%; width: 50%; margin: auto;">
+                <div class="card-body">
+                    <h5 class="card-title"><u>Products</u></h5>
+                    <div class="border"></div>
+                    <p class="card-text">Full list of products with info
+                    </p>
+                    <div class="border"></div>
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"
+                    style="margin-top: 25px;">
+                    PRODUCTS
+                </button>
+            </div>
+
+            <div id="classModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+                aria-labelledby="classInfo" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="classModalLabel">
+                                List of products
+                            </h4>
+                            <button type="button" class="close xModalClose" data-dismiss="modal" aria-hidden="true"
+                                style="font-size:3rem;transform: rotate(45deg); ">
+                                +
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table id="classTable" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% products.forEach(product => { %>
+                                    <tr>
+
+                                        <td><%= product.title %></td>
+                                        <td><%= product.price / 100 %>$</td>
+                                        <td><%= product.description %></td>
+                                        <td> <img src="<%= product.coverImagePath %>"
+                                                style="width: 50px; height: 50px;" />
+                                        </td>
+                                        <td>
+                                            <div class="product-details-btn-grid">
+                                                <a class="btn btn-primary"
+                                                    href="/products/<%= product.id %>/edit">Edit</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="product-details-btn-grid">
+                                                <%- include('../partials/deleteForm', { url: `/products/${product.id}` }) %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="card">
+                <img class="card-img-top" src="./images/newsLetter.bmp" alt="Card image cap"
+                    style="height: 50%; width: 50%; margin: auto;">
+                <div class="card-body">
+                    <h5 class="card-title"><u>List of newsletter</u></h5>
+                    <div class="border"></div>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <%- include('../partials/footer.ejs') %>

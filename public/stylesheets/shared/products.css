@@ -60,6 +60,7 @@ h2 {
   font-weight: 500;
   align-self: flex-start;
   color: white;
+  text-decoration: underline;
 }
 .contEdit {
   padding: 4%;
@@ -73,7 +74,7 @@ h2 {
   align-content: flex-start;
   align-items: center;
   grid-gap: 1rem;
-  grid-template-columns: auto auto;
+  /* grid-template-columns: auto auto; */
 }
 .prodGridTxt {
   text-align: center;

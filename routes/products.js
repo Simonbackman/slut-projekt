@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/product');
 const { ensureAuthenticated } = require('../config/auth');
-const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif'];
+const imageMimeTypes = ['image/jpeg', 'image/png' /*, 'images/gif'*/];
 
 // All Product Route
 router.get('/', ensureAuthenticated, async (req, res) => {
@@ -10,17 +10,12 @@ router.get('/', ensureAuthenticated, async (req, res) => {
   if (req.query.title != null && req.query.title != '') {
     query = query.regex('title', new RegExp(req.query.title, 'i'));
   }
-  // if (req.query.publishedBefore != null && req.query.publishedBefore != "") {
-  //   query = query.lte("publishDate", req.query.publishedBefore);
-  // }
-  // if (req.query.publishedAfter != null && req.query.publishedAfter != "") {
-  //   query = query.gte("publishDate", req.query.publishedAfter);
-  // }
   try {
     const products = await query.exec();
     res.render('products/index', {
       products: products,
-      searchOptions: req.query
+      searchOptions: req.query,
+      name: req.user.name
     });
   } catch {
     res.redirect('/');
@@ -52,8 +47,7 @@ router.post('/', async (req, res) => {
 // Show Product Route
 router.get('/:id', async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id)
-    .exec();
+    const product = await Product.findById(req.params.id).exec();
     res.render('products/show', { product: product });
   } catch {
     res.redirect('/');

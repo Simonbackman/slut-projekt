@@ -70,6 +70,7 @@ footer {
   flex: 1;
   border-radius: 30px;
   font-weight: 800;
+  text-align: center;
 }
 
 .newsFooterBtn {

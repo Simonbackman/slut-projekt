@@ -51,7 +51,31 @@
 
   <%- body %>
 
+  <script>
+    (function ($) {
+      $(function () {
+        $("nav ul li > a:not(:only-child)").click(function (e) {
+          $(this)
+            .siblings(".nav-dropdownA")
+            .toggle();
+          $(".nav-dropdownA")
+            .not($(this).siblings())
+            .hide();
+          e.stopPropagation();
+        });
+        $("html").click(function () {
+          $(".nav-dropdownA").hide();
+        });
+        $("#nav-toggleA").on("click", function () {
+          this.classList.toggle("active");
+        });
+        $("#nav-toggleA").click(function () {
+          $("nav ul").toggle();
+        });
+      });
+    })(jQuery);
 
+  </script>
 
   <script>
     (function ($) {

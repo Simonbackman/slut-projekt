@@ -1,4 +1,33 @@
-<%- include('../partials/dashboardHeader.ejs') %>
+<section class="navigationA">
+  <div class="nav-containerA">
+    <div class="brandA">
+      <a href="/dashboard">Admin Panel</a>
+    </div>
+    <nav class="navAdmin">
+      <div class="nav-mobileA">
+        <a id="nav-toggleA" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-listA">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="#!">Product</a>
+          <ul class="nav-dropdownA">
+            <li><a href="/products">All Products</a></li>
+            <li><a href="/products/new">Create new Product</a></li>
+          </ul>
+        </li>
+        <li><a href="/admins/register">Create Admin</a></li>
+        <li><a href="#!">WebStore</a>
+          <ul class="nav-dropdownA">
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/store">Store</a></li>
+          </ul>
+        </li>
+        <li><a href="/admins/logout" class="btn btn-secondary logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
 <div class="container2 contEdit">
   <h2 class="page-header">Edit Product</h2>
   <%- include('../partials/errorMessage.ejs') %>
