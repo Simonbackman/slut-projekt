@@ -28,6 +28,7 @@
                         placeholder="Confirm Password"
                         value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
                 </div>
+                <p id="demo"></p>
                 <button type="submit" class="btn btn-primary btn-block">
                     Register
                 </button>
@@ -36,4 +37,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.querySelector("#password").addEventListener('keyup', checkCapsLock);
+    document.querySelector("#password").addEventListener('mousedown', checkCapsLock);
+
+    document.querySelector("#password2").addEventListener('keyup', checkCapsLock);
+    document.querySelector("#password2").addEventListener('mousedown', checkCapsLock);
+
+    function checkCapsLock(e) {
+        var caps_lock_on = e.getModifierState('CapsLock');
+
+        if (caps_lock_on == true) {
+            // console.log('Caps Lock is turned on');
+            document.getElementById("demo").innerHTML = "Caps Lock is turned on";
+        }
+        else {
+            // console.log('Caps Lock is turned off');
+            document.getElementById("demo").innerHTML = "";
+        }
+    }
+</script>
+
 <%- include('../partials/footer.ejs') %>

@@ -13,6 +13,7 @@
                     <input type="password" id="password" name="password" class="form-control"
                         placeholder="Enter Password" />
                 </div>
+                <p id="demo"></p>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
             <p class="lead mt-4">
@@ -21,3 +22,22 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.querySelector("#password").addEventListener('keyup', checkCapsLock);
+    document.querySelector("#password").addEventListener('mousedown', checkCapsLock);
+
+    function checkCapsLock(e) {
+        var caps_lock_on = e.getModifierState('CapsLock');
+
+        if (caps_lock_on == true) {
+            // console.log('Caps Lock is turned on');
+            document.getElementById("demo").innerHTML = "Caps Lock is turned on";
+        }
+        else {
+            // console.log('Caps Lock is turned off');
+            document.getElementById("demo").innerHTML = "";
+        }
+    }
+</script>
