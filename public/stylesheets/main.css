@@ -36,6 +36,18 @@ html {
 .modal-body {
   overflow-x: auto;
 }
+
+.field_icon {
+  float: right;
+  position: relative;
+  bottom: 30px;
+  right: 25px;
+  cursor: pointer;
+  color: black;
+}
+.field_icon:hover {
+  color: #aaaaaa;
+}
 #svgLogo {
   animation: textFill 0.5s ease forwards 3.5s;
   -webkit-touch-callout: none;
@@ -142,4 +154,10 @@ html {
 }
 
 @media only screen and (max-width: 466px) {
+}
+
+@media (max-width: 576px) {
+  #bottomDivDashSection {
+    padding-bottom: 70vh;
+  }
 }

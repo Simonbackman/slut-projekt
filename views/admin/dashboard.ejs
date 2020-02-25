@@ -4,7 +4,7 @@
 </style>
 
 <section style="height: 100vh;">
-    <div class="container" style="padding-top:28vh;">
+    <div class="container">
         <div class="card-group">
             <div class="card">
                 <img class="card-img-top" src="./images/iconList.png" alt="Card image cap"
@@ -12,17 +12,17 @@
                 <div class="card-body">
                     <h5 class="card-title"><u>Products</u></h5>
                     <div class="border"></div>
-                    <p class="card-text">Full list of products with info
+                    <p class="card-text">Full list of products with information
                     </p>
                     <div class="border"></div>
                 </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lgprod"
                     style="margin-top: 25px;">
                     PRODUCTS
                 </button>
             </div>
 
-            <div id="classModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+            <div id="classModal" class="modal fade bs-example-modal-lgprod" tabindex="-1" role="dialog"
                 aria-labelledby="classInfo" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -31,12 +31,12 @@
                                 List of products
                             </h4>
                             <button type="button" class="close xModalClose" data-dismiss="modal" aria-hidden="true"
-                                style="font-size:3rem;transform: rotate(45deg); ">
+                                style="font-size:3rem;transform: rotate(45deg);outline: none; ">
                                 +
                             </button>
                         </div>
                         <div class="modal-body">
-                            <table id="classTable" class="table table-bordered">
+                            <table id="classTable" class="table table-bordered table-dark">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -93,14 +93,55 @@
                 <div class="card-body">
                     <h5 class="card-title"><u>List of newsletter</u></h5>
                     <div class="border"></div>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    <p class="card-text">People that has signed up for WebStores weekly NewsLetter
                     </p>
+                    <div class="border"></div>
                 </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target=".bd-example-modal-lgNewsLetter">NewsLetter Subscriptions
+                </button>
             </div>
 
+            <div class="modal fade bd-example-modal-lgNewsLetter" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="classModalLabel">
+                                NewsLetter Subscriptions
+                            </h4>
+                            <button type="button" class="close xModalClose" data-dismiss="modal" aria-hidden="true"
+                                style="font-size:3rem;transform: rotate(45deg); outline: none; ">
+                                +
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover table-dark">
+                                <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% news.forEach(news => { %>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><%= news.email %></td>
+                                        <td><%= news.date %></td>
+                                    </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<div id="bottomDivDashSection">
 
+</div>
 
 <%- include('../partials/footer.ejs') %>

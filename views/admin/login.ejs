@@ -1,6 +1,6 @@
-<script>
+<!-- <script>
   alert("Mail: admin@admin.com, password: admin");
-</script>
+</script> -->
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body" style="border-radius: 55px">
@@ -11,25 +11,14 @@
       <form action="/admins/Login" method="POST">
         <div class="form-group">
           <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter Email"
-          />
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control"
-            placeholder="Enter Password"
-          />
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" />
+          <span class="fa fa-fw fa-eye-slash  field_icon toggle-password"></span>
         </div>
-        <p id="demo"></p>
+        <p id=" demo"></p>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
       </form>
       <p class="lead mt-4">Not an admin go back <a href="/">Startpage</a></p>
@@ -53,5 +42,12 @@
       // console.log('Caps Lock is turned off');
       document.getElementById("demo").innerHTML = "";
     }
-  }
+  };
+  $(document).on('click', '.toggle-password', function () {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $("#password");
+    input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+  });
 </script>

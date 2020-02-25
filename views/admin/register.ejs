@@ -21,12 +21,14 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control"
                         placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" />
+                    <span class="fa fa-fw fa-eye-slash  field_icon toggle-password"></span>
                 </div>
                 <div class="form-group">
                     <label for="password2">Confirm Password</label>
                     <input type="password" id="password2" name="password2" class="form-control"
                         placeholder="Confirm Password"
                         value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                    <span class="fa fa-fw fa-eye-slash  field_icon toggle-passwordConf"></span>
                 </div>
                 <p id="demo"></p>
                 <button type="submit" class="btn btn-primary btn-block">
@@ -56,7 +58,22 @@
             // console.log('Caps Lock is turned off');
             document.getElementById("demo").innerHTML = "";
         }
-    }
+    };
+    $(document).on('click', '.toggle-password', function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var inputFirst = $("#password");
+        inputFirst.attr('type') === 'password' ? inputFirst.attr('type', 'text') : inputFirst.attr('type', 'password')
+    });
+
+    $(document).on('click', '.toggle-passwordConf', function () {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var inputSecond = $("#password2");
+        inputSecond.attr('type') === 'password' ? inputSecond.attr('type', 'text') : inputSecond.attr('type', 'password')
+
+    });
 </script>
 
 <%- include('../partials/footer.ejs') %>
