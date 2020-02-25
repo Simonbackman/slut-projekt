@@ -1,4 +1,8 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <%- include('../partials/dashboardHeader.ejs') %>
+
+<a id="btnTop"></a>
+
 <div class="container2">
   <h2 class="page-header">Search Products</h2>
   <form class="searchFormInd" action="/products" method="GET">
@@ -17,3 +21,20 @@
   <%- include('../partials/productGrid', { products: products, large: true }) %>
 </div>
 <%- include('../partials/footer.ejs') %>
+
+<script>
+  var btn = $('#btnTop');
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+
+  btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+</script>
