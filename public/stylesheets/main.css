@@ -156,7 +156,12 @@ html {
   #prodGridContE {
     margin: auto;
     width: 90%;
+    transition: transform 0.2s;
   }
+  #prodGridContE:hover {
+    transform: scale(0.9);
+  }
+
   .page-header {
     font-size: 1.5rem;
   }
