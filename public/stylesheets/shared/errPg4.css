@@ -1,5 +1,5 @@
 .errPg4 {
-  font: 80px "LeagueGothicRegular";
+  font: 80px 'LeagueGothicRegular';
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d2d,
     0 0 30px #ff2d2d, 0 0 40px #ff2d2d, 0 0 50px #ff2d2d, 0 0 75px #ff2d2d;
@@ -8,4 +8,29 @@
 
 #errpgContainer {
   border-radius: 90px;
+}
+
+.errPg4 {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60000,
+      0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
+  }
+
+  to {
+    /* text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #00000000, 0 0 40px #00000000,
+    0 0 50px #00000000, 0 0 60px #00000000, 0 0 70px #00000000,
+    0 0 80prgba (0, 0, 0, 0) 00; */
+
+    text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #7c4dff,
+      0 0 50px #f3ff4d, 0 0 60px #85ff4d, 0 0 70px #4d94ff, 0 0 80px #ff4dbb;
+  }
 }
