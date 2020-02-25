@@ -51,7 +51,7 @@ app.use('/', require('./routes/index'));
 app.use('/admins', require('./routes/admins'));
 app.use('/products', require('./routes/products'));
 // 404 page
-app.get('*', (req, res) => res.render(__dirname + '\\views\\404.ejs'));
+app.get('*', (req, res) => res.render(__dirname + '\\views\\404'));
 
 // app.listen(process.env.PORT || 2000);
 
