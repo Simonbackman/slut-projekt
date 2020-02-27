@@ -1,3 +1,4 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://checkout.stripe.com/checkout.js" defer></script>
 <script>
     var stripePublicKey = '<%= stripePublicKey %>'
@@ -14,8 +15,8 @@
     }
 </style>
 <%- include('./partials/nav.ejs') %>
-
-<section class="content-section">
+<a id="btnTop"></a>
+<section class="content-section" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
     <h2 class="section-header mt-4">Products</h2>
     <div class="shop-items">
         <% products.forEach(product => { %>
@@ -51,10 +52,10 @@
 
 
 
-<section class="content-section">
+<section class="content-section" style=" border-top-left-radius: 0; border-top-right-radius:0;">
     <h2 class="section-header">CART</h2>
     <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-item cart-header cart-column">img/titel</span>
         <span class="cart-price cart-header cart-column">PRICE</span>
         <span class="cart-quantity cart-header cart-column">QUANTITY</span>
     </div>
@@ -68,3 +69,21 @@
 </section>
 
 <%- include('./partials/footer.ejs') %>
+
+
+<script>
+    var btn = $('#btnTop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+</script>

@@ -243,8 +243,6 @@
 }
 
 @media (max-width: 615px) {
-  .cart-row {
-  }
   .cart-item {
     width: 30vw;
   }
@@ -259,8 +257,6 @@
   }
 }
 @media (max-width: 400px) {
-  .cart-row {
-  }
   .cart-item {
     width: 30vw;
   }
