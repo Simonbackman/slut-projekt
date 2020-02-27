@@ -1,16 +1,16 @@
-@import "shared/nav.css";
-@import "shared/errPg4.css";
-@import "shared/dashboard.css";
-@import "shared/footer.css";
-@import "shared/adminNav.css";
-@import "shared/store.css";
+@import 'shared/nav.css';
+@import 'shared/errPg4.css';
+@import 'shared/dashboard.css';
+@import 'shared/footer.css';
+@import 'shared/adminNav.css';
+@import 'shared/store.css';
 
-@import "shared/buttons.css";
-@import "shared/form.css";
-@import "shared/products.css";
+@import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/products.css';
 
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 *,
 *::before,
 *::after {
@@ -23,7 +23,7 @@ body,
 html {
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .error-message {
@@ -49,6 +49,15 @@ html {
 .field_icon:hover {
   color: #aaaaaa;
 }
+
+.adminListImgSm {
+  width: 50px;
+  height: 50px;
+}
+.adminListImgSm:hover {
+  transform: scale(3);
+}
+
 #svgLogo {
   animation: textFill 0.5s ease forwards 3.5s;
   -webkit-touch-callout: none;
