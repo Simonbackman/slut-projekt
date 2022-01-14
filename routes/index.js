@@ -22,7 +22,7 @@ router.get('/store', async (req, res) => {
     const products = await query.exec();
     res.render('store', {
       products: products,
-      stripePublicKey: stripePublicKey
+      stripePublicKey: stripePublicKey,
     });
   } catch {
     res.redirect('/');
@@ -36,7 +36,7 @@ router.post('/purchase', async (req, res) => {
   // } else {
   console.log(req.body);
   var total = 0;
-  req.body.products.forEach(product => {
+  req.body.products.forEach((product) => {
     total = total + product.price * product.quantity;
   });
 
@@ -45,7 +45,7 @@ router.post('/purchase', async (req, res) => {
     .create({
       amount: total,
       source: req.body.stripeTokenId,
-      currency: 'usd'
+      currency: 'usd',
     })
     .then(() => {
       console.log('Charge Successful');
@@ -73,7 +73,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
       products: products,
       // searchOptions: req.query,
       name: req.user.name,
-      news: news
+      news: news,
     });
   } catch {
     res.redirect('/');
@@ -82,7 +82,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
 
 router.post('/', async (req, res) => {
   const news = new News({
-    email: req.body.email
+    email: req.body.email,
   });
   try {
     const newNews = await news.save();
@@ -90,7 +90,7 @@ router.post('/', async (req, res) => {
   } catch {
     res.render('index', {
       news: news,
-      errorMessage: 'Error signing up for newsletter'
+      errorMessage: 'Error signing up for newsletter',
     });
   }
 });
